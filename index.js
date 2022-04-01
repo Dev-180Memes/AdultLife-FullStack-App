@@ -25,7 +25,7 @@ io.on('connection', socket => {
         socket.emit('message', formatMessage(botName, 'Welcome to AdultLife Chatrooms.'));
 
         // Broadcast when a user connects
-        socket.Broadcast
+        socket.broadcast
             .to(user.room)
             .emit(
                 'message',
